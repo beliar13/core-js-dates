@@ -217,7 +217,7 @@ function getWeekNumberByDate(date) {
   while (temp.getDay() !== 0) {
     offset += 1;
     temp = new Date(year, 0, 1 + offset);
-    actualStart = new Date(year, 0, offset);
+    actualStart = new Date(year, 0, offset + 1);
   }
   return offset > 0
     ? Math.ceil((input - actualStart) / week + 1)
